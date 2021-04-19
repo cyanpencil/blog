@@ -1,0 +1,196 @@
+//@import "rouge-base16-dark";
+@import "syntax";
+@import "header";
+@import "footer";
+@import "buttons";
+@import "headings";
+@import "flex";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-rendering: geometricPrecision;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Menlo", "DejaVu Sans Mono", "Lucida Console", monospace;
+  line-height: 1.5;
+}
+
+@media(max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  //background: #080808;
+background: #d7cec7;
+color: #565656;
+  //color: #aaa;
+}
+
+/* General & 'Reset' Stuff */
+
+::selection {
+  background: #268bd2;
+}
+
+.container {
+  width: 90%;
+  max-width: 70rem;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+section {
+  display: block;
+  margin: 0 0 20px 0;
+}
+
+
+li {
+  line-height: 1.4 ;
+}
+
+#main_content {
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 1.5rem;
+}
+
+section img {
+  max-width: 100%
+}
+
+figure {
+	margin-bottom: 1em;
+	font-size: 0.9em;
+}
+
+dt {
+  font-style: italic;
+  font-weight: bold;
+}
+
+dd {
+  padding-left: .25rem;
+}
+
+ul, ol {
+  list-style-position: outside;
+}
+
+li {
+  margin-bottom: .1rem;
+}
+
+li > ul, li > ol {
+  padding-left: 2rem;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 1em;
+}
+
+ul ul {
+  margin-left: 5px;
+}
+
+
+blockquote {
+  //color: #aaa;
+color: #787878;
+  margin: 1rem;
+  padding-left: 10px;
+  border-left: 1px dashed #666;
+}
+
+pre {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px dashed #444;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+table {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+th {
+  text-align: left;
+  border-bottom: 1px dashed #444;
+  padding: 4px 15px;
+}
+
+td {
+  padding: 4px 15px;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 1px dashed #444;
+  color: #444;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
+  //color: #ccc;
+color: #343434;
+  font-weight: bold;
+}
+
+em {
+  color: #eee;
+color: #343434;
+  font-style: italic;
+}
+
+
+/* Links
+   a, a:hover, a:visited
+*/
+
+a {
+  //color: #d33682;
+color: #76323f;
+}
+
+a:hover {
+  //color: #eee;
+  //background-color: #d33682;
+color: #d7e7c7;
+background-color: #76323f;
+  text-decoration: none;
+}
+
+/* Clearfix */
+
+.cf:before, .cf:after {
+  content:"";
+  display:table;
+}
+
+.cf:after {
+  clear:both;
+}
+
+.cf {
+  zoom:1;
+}
