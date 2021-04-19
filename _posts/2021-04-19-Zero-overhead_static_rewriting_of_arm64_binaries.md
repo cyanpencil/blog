@@ -25,7 +25,7 @@ Unfortunately, it also has the following non-features:
   
 To be honest though, many static rewriters share the above limitations.
 
-Anyway, here are the [slides](/assets/retrowrite_slides.pdf) for my master presentation,
-and here is the full [thesis](/assets/retrowrite.pdf). 
+Anyway, here are the [slides]({{ site.baseurl }}/assets/retrowrite_slides.pdf) for my master presentation,
+and here is the full [thesis]({{ site.baseurl }}/assets/retrowrite.pdf). 
 
 Write me a mail or reach me out on [twitter](https://twitter.com/cyan_pencil) if you have any questions!
