@@ -4,6 +4,8 @@ title:  Zero-overhead static rewriting of arm64 binaries
 date:   Mon Apr 19 08:33:08 PM CEST 2021
 ---
 
+# Zero-overhead static rewriting of arm64 binaries
+
 Hello,
 
 So for my master thesis I worked on a nice static rewriter for aarch64 binaries. 
