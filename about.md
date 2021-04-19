@@ -15,9 +15,12 @@ Sometimes I learn so much; sometimes I just waste time.
 
 &nbsp;
 
-I am currently pursuing a computer science master degree at [ETH Zurich](http://www.ethz.ch).
+I am currently pursuing a PhD at [(EPFL Lausanne](https://www.epfl.ch), in the 
+  [HexHive](https://hexhive.epfl.ch) research group.
 
-I graduated with honours from [La Sapienza](http://www.uniroma1.it) university in Rome.
+I took my master degree at [ETH Zurich](https://www.ethz.ch).
+
+I graduated with honours from [La Sapienza](https://www.uniroma1.it) university in Rome.
 
 I had my fun participating in programming competitions such as the 
 [OII](https://www.olimpiadi-informatica.it/index.php?option=com_content&view=article&id=142&Itemid=93&lang=it)
