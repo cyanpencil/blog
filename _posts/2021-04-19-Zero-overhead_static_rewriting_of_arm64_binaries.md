@@ -31,12 +31,6 @@ Anyway, here are the [slides]({{ site.baseurl }}/assets/retrowrite_slides.pdf) f
 and here is the full [thesis]({{ site.baseurl }}/assets/retrowrite.pdf). 
 
 Write me a mail or reach me out on [twitter](https://twitter.com/cyan_pencil) if you have any questions!
-aaaaaaa
-
-helo
 
 
-
-
-
-ow
+aooo
