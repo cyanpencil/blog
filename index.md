@@ -2,6 +2,29 @@
 layout: default
 ---
 
+
+<div style="margin-top:20%">
+<center>
+Hi
+<br/>
+My name is cyanpencil
+<br/>
+Have a look at my stuff
+<br/>
+
+[<a href="{{ site.baseurl }}/posts">posts</a>]
+-
+[<a href="{{ site.baseurl }}/about">about</a>]
+-
+[<a href="{{ site.baseurl }}/contact">contact</a>]
+</center>
+</div>
+
+
+
+
+
+{% comment %}
 <ul class="entries">
   {% for post in site.posts %}
   <li>
@@ -15,3 +38,4 @@ layout: default
   </li>
   {% endfor %}
 </ul>
+{% endcomment %}
