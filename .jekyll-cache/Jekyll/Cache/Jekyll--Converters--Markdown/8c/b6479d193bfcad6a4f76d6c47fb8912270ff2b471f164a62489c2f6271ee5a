@@ -1,0 +1,125 @@
+I"�2<h1 id="automatic-vim-folds-for-config-files">Automatic vim folds for config files</h1>
+
+<p>Vim folds are neat. You can toggle them open/closed quickly with <code class="language-plaintext highlighter-rouge">za</code> (which I remapped to space), 
+but creating/deleting them is kind of awkward with <code class="language-plaintext highlighter-rouge">zf</code>/<code class="language-plaintext highlighter-rouge">zd</code> and most of all making vim
+remember where your folds were is a bit of a pain.</p>
+
+<p>But luckily there is a way to define folds through <em>comments in the source code</em>, which is really
+as cool as it sounds.</p>
+
+<p>It is particularly comfortable to use in config files, that sometimes get a bit too long, and organising
+stuff into groups can save you some headaches.</p>
+
+<p>Example of my <code class="language-plaintext highlighter-rouge">.vimrc</code> as soon as I open it with vim:</p>
+
+<figure>
+	<center>
+	<img src="/blog/assets/images/vim_auto_folds_example.png" width="70%" alt="Good stuff" />
+	<figcaption>500 lines of confusing vimrc all neatly organized into sections!</figcaption>
+	</center>
+</figure>
+
+<p>I set it up in a way that defining folds is done through marks, but since I hated vim’s default <code class="language-plaintext highlighter-rouge">{{{</code> marks, I defined
+my own set of them, that work like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#    === Fold-title 1 ===</span>
+yada yada yada
+<span class="c">#    ==== Sub-fold ====</span>
+<span class="c">#    ===== Sub-Sub-fold =====</span>
+hello
+<span class="c">#    =====</span>
+<span class="c">#    ====</span>
+<span class="c">#    ===</span>
+</code></pre></div></div>
+
+<p>Result:</p>
+<figure>
+	<center>
+	<img src="/blog/assets/images/vim_auto_folds_example2.png" width="70%" alt="Good stuff" />
+	<figcaption>You can see the folds in the leftmost columns (using :set foldcolumns=4)</figcaption>
+	</center>
+</figure>
+
+<h3 id="nice-how-does-it-work">Nice, how does it work?</h3>
+
+<p>A top-level fold is started by the <code class="language-plaintext highlighter-rouge">=== &lt;title&gt; ===</code> mark anywhere on the line (it doesn’t matter what character you use to
+define the comment, so this works nicely with almost every config file), and is ended by a <code class="language-plaintext highlighter-rouge">===</code> mark, anywhere on any next line.</p>
+
+<p>A one-level deep fold is started by writing <code class="language-plaintext highlighter-rouge">==== &lt;title&gt; ====</code> anywhere on a line, and ended by <code class="language-plaintext highlighter-rouge">====</code> on any of the following lines.
+The more ‘equal’ sings you add, the deeper the fold will be.</p>
+
+<p>Folds will be created as soon as you save and reload the file.</p>
+
+<p>You <em>do not</em> need to edit your <code class="language-plaintext highlighter-rouge">.vimrc</code> to achieve this, you just need to put the following at the end of the config file you want to auto-fold:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"" vim:fdm=expr:fdl=0
+"" vim:fde=getline(v\:lnum)=~'===*$'?(getline(v\:lnum)=~'==\\+[^=]\\+==.*'?'&gt;'\:'&lt;').(strlen(matchstr(getline(v\:lnum),'==*$'))-2)\:'='
+</code></pre></div></div>
+<p>(I start the lines with the <code class="language-plaintext highlighter-rouge">"</code> because I’m using this for my .vimrc; you can use whatever comment character you want to start those lines)</p>
+
+<p>Beware, if you go on, this will involve some hardcore <em>vim-fu</em> to understand - but you don’t really need to, you can just copy paste this obscenity
+and go on with your life.</p>
+
+<h3 id="ok-so-what-the-hell-is-this-mess">Ok, so, what the hell is this mess?</h3>
+
+<p>Basically, we are dynamically setting vim options when we open a file that contains lines starting with <code class="language-plaintext highlighter-rouge">vim:</code> at its end.
+It’s a feature called <em>modelines</em>, you can read about it with <code class="language-plaintext highlighter-rouge">:help modeline</code>.
+The syntax is <code class="language-plaintext highlighter-rouge">vim:&lt;option&gt;=&lt;value&gt;:&lt;option&gt;:&lt;value&gt;</code>. It basically emulates a <code class="language-plaintext highlighter-rouge">:set </code> command.
+So, for example, if I don’t want vim to autoindent when I’m editing my <code class="language-plaintext highlighter-rouge">.bashrc</code>, I just need to put 
+<code class="language-plaintext highlighter-rouge"># vim:noautoindent</code> at the end of it.</p>
+
+<p><em>Note: It is not strictly necessary to put the modeline at the end of the file, but please do it, for your own sanity.</em>
+<em>Note: If modelines don’t work for you be sure that you don’t have modelines=off in your .vimrc</em></p>
+
+<p>With the two modelines above we are setting the options:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fdm</code>, short for <code class="language-plaintext highlighter-rouge">foldmethod</code>, and we set it to <code class="language-plaintext highlighter-rouge">expr</code>, meaning that vim must define folds based on an “expression” we will give</li>
+  <li><code class="language-plaintext highlighter-rouge">fdl</code>, short for <code class="language-plaintext highlighter-rouge">foldlevel</code>, and we set it to 0, so that when we open the file, all folds will be closed.</li>
+  <li><code class="language-plaintext highlighter-rouge">fde</code>, short for <code class="language-plaintext highlighter-rouge">foldexpr</code>, and we set it to a <strong>vimscript</strong> (I know, I’m
+ sorry) function that will be evaluated on every line. This 
+  function can return the following values:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">n</code>: this line is in a fold deep <code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">1</code> or <code class="language-plaintext highlighter-rouge">n</code> levels</li>
+      <li><code class="language-plaintext highlighter-rouge">=</code>: this line is in a fold as deep as the previous line</li>
+      <li><code class="language-plaintext highlighter-rouge">&gt;1</code>, <code class="language-plaintext highlighter-rouge">&gt;2</code>, <code class="language-plaintext highlighter-rouge">&gt;n</code>: a fold of level <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code> or <code class="language-plaintext highlighter-rouge">n</code> starts at this line</li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;1</code>, <code class="language-plaintext highlighter-rouge">&lt;2</code>, <code class="language-plaintext highlighter-rouge">&lt;n</code>: a fold of level <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code> or <code class="language-plaintext highlighter-rouge">n</code> ends at this line
+  (have a more in depth look with <code class="language-plaintext highlighter-rouge">:help fold*expr</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Now, I won’t go into detail about what that <code class="language-plaintext highlighter-rouge">vim:fde</code> line does (tbh I wrote it months ago and I don’t have the slightest idea of how it works anymore), 
+but, to not scare you too much, I will list you the vimscript operators I used:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">getline(v\:lnum)</code>: returns the current line being evaluated as a string.</li>
+  <li>operator <code class="language-plaintext highlighter-rouge">=~</code>: much like bash, returns true when used in syntax <code class="language-plaintext highlighter-rouge">&lt;string&gt;=~&lt;regex&gt;</code> and the string matches the regex.</li>
+  <li><code class="language-plaintext highlighter-rouge">matchstr(&lt;string&gt;, &lt;regex&gt;)</code>: returns only the part of the string that matches the regex</li>
+  <li>operator <code class="language-plaintext highlighter-rouge">?</code>: ternary operator, works exactly like in C and many other languages</li>
+</ul>
+
+<p>Neat! Now you can define your own set of marks and overly complicated folding logic.</p>
+
+<h3 id="but-wait-my-folds-are-a-bit-uglier-than-yours">But wait, my folds are a bit uglier than yours</h3>
+
+<p>I know, you don’t really get results like in the first screenshot; normal vim folds are somewhat uglier - to fix this, 
+we need a custom <em>fold drawing function</em>.
+You just need to write your own vimscript function, and then <code class="language-plaintext highlighter-rouge">set foldtext=&lt;yourfunction&gt;</code>.</p>
+
+<p>Here is mine, I forked it from somewhere, but don’t remember precisely. I <em>am not</em> going to explain this one - sorry,
+you are on your own with this bad boy - but you can copy it too if you want, it works well with <code class="language-plaintext highlighter-rouge">===</code> markers.</p>
+
+<div class="language-vimscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span><span class="p">!</span> NeatFoldText<span class="p">()</span>
+	<span class="k">let</span> <span class="nb">line</span> <span class="p">=</span> <span class="s1">' '</span><span class="p">.</span><span class="nb">substitute</span><span class="p">(</span><span class="nb">getline</span><span class="p">(</span><span class="k">v</span><span class="p">:</span>foldstart<span class="p">),</span> <span class="s1">'["#\/%!]*\s\+=\+\s*'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span><span class="s1">'g'</span><span class="p">).</span><span class="s1">' '</span>
+	<span class="k">let</span> <span class="nb">line</span> <span class="p">=</span> <span class="nb">repeat</span><span class="p">(</span><span class="s1">'['</span><span class="p">,</span> <span class="k">v</span><span class="p">:</span><span class="nb">foldlevel</span><span class="p">)</span> <span class="p">.</span> <span class="nb">line</span> <span class="p">.</span> <span class="nb">repeat</span><span class="p">(</span><span class="s1">']'</span><span class="p">,</span> <span class="k">v</span><span class="p">:</span><span class="nb">foldlevel</span><span class="p">)</span>
+	<span class="k">let</span> lines_count <span class="p">=</span> <span class="k">v</span><span class="p">:</span>foldend <span class="p">-</span> <span class="k">v</span><span class="p">:</span>foldstart <span class="p">+</span> <span class="m">1</span>
+	<span class="k">let</span> lines_count_text <span class="p">=</span> <span class="s1">'| '</span> <span class="p">.</span> <span class="nb">printf</span><span class="p">(</span><span class="s2">"%10s"</span><span class="p">,</span> lines_count <span class="p">.</span> <span class="s1">' lines'</span><span class="p">)</span> <span class="p">.</span> <span class="s1">' |'</span>
+	<span class="k">let</span> foldtextstart <span class="p">=</span> <span class="nb">strpart</span><span class="p">(</span><span class="nb">repeat</span><span class="p">(</span><span class="s1">'  '</span><span class="p">,</span><span class="k">v</span><span class="p">:</span><span class="nb">foldlevel</span><span class="p">)</span> <span class="p">.</span> <span class="nb">line</span> <span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="p">(</span><span class="nb">winwidth</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>*<span class="m">2</span><span class="p">)</span>/<span class="m">3</span><span class="p">)</span>
+	<span class="k">let</span> foldtextend <span class="p">=</span> lines_count_text <span class="p">.</span> <span class="nb">repeat</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="m">8</span><span class="p">)</span>
+	<span class="k">let</span> foldtextlength <span class="p">=</span> <span class="nb">strlen</span><span class="p">(</span>foldtextstart <span class="p">.</span> foldtextend<span class="p">)</span> <span class="p">+</span> &amp;<span class="nb">foldcolumn</span>
+	<span class="k">return</span> foldtextstart <span class="p">.</span> <span class="nb">repeat</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="nb">winwidth</span><span class="p">(</span><span class="m">0</span><span class="p">)-</span>foldtextlength<span class="p">)</span> <span class="p">.</span> foldtextend
+<span class="k">endfunction</span>
+
+<span class="k">set</span> <span class="nb">foldtext</span><span class="p">=</span>NeatFoldText<span class="p">()</span>
+</code></pre></div></div>
+:ET

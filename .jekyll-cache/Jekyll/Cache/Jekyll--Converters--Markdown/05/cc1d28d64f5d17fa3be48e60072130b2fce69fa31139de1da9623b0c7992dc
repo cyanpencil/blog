@@ -1,0 +1,32 @@
+I"�<h1 id="zero-overhead-static-rewriting-of-arm64-binaries">Zero-overhead static rewriting of arm64 binaries</h1>
+
+<p>Hello,</p>
+
+<p>So for my master thesis I worked on a nice static rewriter for aarch64 binaries. 
+It’s pretty cool, and has the following features:</p>
+
+<ul>
+  <li>“<em>Zero</em>” overhead  (less than &lt;1% without instrumentation)</li>
+  <li>First symbolization approach on aarch64</li>
+  <li>Small (&lt;3k LOC of python) and built to be easy to add instrumentation modules</li>
+  <li>Address Sanitization implemented as intrumentation pass that lets you add 
+ASAN checks on closed-source binaries. Same memory sanitization result as
+running a binary through e.g. Valgrind but with almost an order of magnitude
+less overhead (very nice for fuzzing!)</li>
+</ul>
+
+<p>Unfortunately, it also has the following non-features:</p>
+
+<ul>
+  <li>Only works on C binaries (for now)</li>
+  <li>No obfuscated/packed/self-modifying code (basically, only well-behaved compilers)</li>
+  <li>No statically-linked binaries</li>
+</ul>
+
+<p>To be honest though, many static rewriters share the above limitations.</p>
+
+<p>Anyway, here are the <a href="/blog/assets/retrowrite_slides.pdf">slides</a> for my master presentation,
+and here is the full <a href="/blog/assets/retrowrite.pdf">thesis</a>.</p>
+
+<p>Write me a mail or reach me out on <a href="https://twitter.com/cyan_pencil">twitter</a> if you have any questions!</p>
+:ET

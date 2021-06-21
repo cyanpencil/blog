@@ -1,0 +1,39 @@
+I"�<h1 id="rotate-vim-colorscheme-between-day-and-night-automatically">Rotate vim colorscheme between day and night automatically</h1>
+
+<!--<center>-->
+<!--<img src="/blog/assets/images/vim_colorschemes.png" width="80%" align="middle"/>-->
+<!--</center>-->
+
+<p>It happens quite often that I work on my laptop outside during the day. My
+all-time favourite colorcheme,
+<a href="https://github.com/AlessandroYorba/Alduin">alduin</a>, gets absolutely killed by
+sunlight. For this reason, I have to sometimes switch to a light colorscheme.</p>
+
+<figure>
+	<center>
+	<img src="/blog/assets/images/vim_colorschemes.png" width="80%" alt="ouch, my eyes." />
+	<figcaption>Left for the night, right for the day.</figcaption>
+	</center>
+</figure>
+
+<p>Switching manually colorscheme gets tedious after the third time. But it turns
+out that making it automatic is really simple, just add those lines to your <code class="language-plaintext highlighter-rouge">.vimrc</code>:</p>
+
+<div class="language-vimscript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="nb">strftime</span><span class="p">(</span><span class="s1">'%H'</span><span class="p">)</span> % <span class="m">19</span> <span class="p">&gt;</span> <span class="m">7</span>
+	<span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">light</span>
+	<span class="k">colo</span> lightning
+<span class="k">else</span>
+	<span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
+	<span class="k">colo</span> alduin
+<span class="k">endif</span>
+</code></pre></div></div>
+
+<p>For now, I’m using <a href="https://github.com/wimstefan/Lightning">lightning</a> as the light themed
+colorscheme, but I’m not really a fan of it. If you know about one as cool as alduin, let
+me know via email or Telegram. I really need it.</p>
+
+<p><em>Note: if you use <a href="">vim plug</a> to manage your colorschemes, make sure to put
+the <code class="language-plaintext highlighter-rouge">colorscheme</code> command after the call to <code class="language-plaintext highlighter-rouge">plug#end()</code>, otherwise you will
+just end up with the default colorscheme.</em></p>
+
+:ET

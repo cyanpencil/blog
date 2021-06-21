@@ -1,0 +1,19 @@
+I"t<h1 id="get-a-list-of-upcoming-ctfs-directly-from-your-command-line">Get a list of upcoming CTFs directly from your command line</h1>
+
+<center>
+<img src="/blog/assets/images/ctfwatch.png" width="70%" align="middle" />
+</center>
+
+<p><br />
+I just created a small endpoint to query the next 10 upcoming CTFs from.
+Just open a terminal and run</p>
+
+<p><code class="language-plaintext highlighter-rouge">curl ctf.watch</code></p>
+
+<p>That’s right, it even has ansi-art logos! (Well, at least a resemblance…)</p>
+
+<p>You can find the source available <a href="https://github.com/cyanpencil/ctfwatch">here</a></p>
+
+<p>Enjoy!</p>
+
+:ET

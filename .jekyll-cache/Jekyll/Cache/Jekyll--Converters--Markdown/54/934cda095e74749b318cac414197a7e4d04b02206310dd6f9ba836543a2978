@@ -1,0 +1,21 @@
+I"<h1 id="posts">Posts</h1>
+
+<ul>
+
+<li><a href="/blog/Zero-overhead_static_rewriting_of_arm64_binaries/" title="Zero-overhead static rewriting of arm64 binaries">Zero-overhead static rewriting of arm64 binaries</a></li>
+
+<li><a href="/blog/whatsapp-smali-injection/" title="Whatsapp smali injection for n00bz">Whatsapp smali injection for n00bz</a></li>
+
+<li><a href="/blog/ctfwatch/" title="Upcoming CTFs directly from your terminal">Upcoming CTFs directly from your terminal</a></li>
+
+<li><a href="/blog/vim-auto-folds/" title="Automatic vim folds for config files">Automatic vim folds for config files</a></li>
+
+<li><a href="/blog/change_vim_colors_time/" title="Auto rotate vim colorscheme on day/night">Auto rotate vim colorscheme on day/night</a></li>
+
+<li><a href="/blog/ssh_telegram_login/" title="Telegram notification on ssh login ">Telegram notification on ssh login </a></li>
+
+<li><a href="/blog/ANSI-magic/" title="Cool bash stuff with ANSI escape codes">Cool bash stuff with ANSI escape codes</a></li>
+       
+</ul>
+
+:ET
