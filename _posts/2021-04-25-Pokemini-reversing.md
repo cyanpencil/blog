@@ -93,7 +93,7 @@ Function `0x2c95`:
 
 This horrible mess was an absolute pain to understand. 
 
-Desperate 
+It will continue in another blog post, as it definitely needs part 2 of its own.
 
 
 
