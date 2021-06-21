@@ -89,7 +89,7 @@ where the flag was written.
 
 Function `0x2c95`:
 
-![](assets/2021-04-25_1262x1379_000.png)
+![]({{site.baseurl}}/assets/2021-04-25_1262x1379_000.png)
 
 This horrible mess was an absolute pain to understand. 
 
