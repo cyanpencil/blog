@@ -12,6 +12,8 @@
 - [2021-04-19-Zero-overhead_static_rewriting_of_arm64_binaries](2021-04-19-Zero-overhead_static_rewriting_of_arm64_binaries)
 - [2021-04-25-Pokemini-reversing](2021-04-25-Pokemini-reversing)
 - [2021-06-21-Dreamctf](2021-06-21-Dreamctf)
+- [2021-09-15-FlareON](2021-09-15-FlareON)
+- [2021-10-18-JUST](2021-10-18-JUST)
 - [update](update.sh)
 
 
