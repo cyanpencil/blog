@@ -14,7 +14,7 @@ just the fastest way I found to get what I wanted. Similar in spirit to a ctf wr
 ## backstory
 
 So it all started by taking _a lot_ of italian trains during my studies, where I did back-and-forth between
-Italy and Switzerland almost every day. And when travelling with italian trains there are two things that really
+Italy and Switzerland basically every month. And when travelling with italian trains there are two things that really
 cannot go unnoticed:
  - soul-crushing delays
  - the voice that crushes your soul announcing those delays. 
@@ -22,7 +22,7 @@ I'm pretty sure whoever set foot on a Trenitalia station knows perfectly what I'
 here's a great example of why this automatic voice is so iconic:
 
 <center>
-<iframe width="560" height="315"
+<iframe width="50%" 
 src="https://www.youtube.com/embed/nzzM7tO4Lqg" title="YouTube video player"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
