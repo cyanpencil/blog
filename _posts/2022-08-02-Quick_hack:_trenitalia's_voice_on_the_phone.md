@@ -255,9 +255,11 @@ And guess what? it worked!
 I had a very fun time calling my friend; it took him a while to recognize I was the one controlling the voice :P
 
 
-<br/>
+<br>
+
 ---
-<br/>
+
+<br>
 
 If you liked this hack, make sure to hit me up and meet me at next year's camp
 (CCC 2023). Expect some even crazier phone hacking shenanigans. If you hear
