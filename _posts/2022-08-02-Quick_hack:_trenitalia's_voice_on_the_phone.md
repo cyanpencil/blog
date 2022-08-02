@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Quick hacks: trenitalia's voice on the phone
+title:  "Quick hacks: trenitalia's voice on the phone"
 date:   Tue Aug  2 05:37:55 PM CEST 2022
 ---
 
