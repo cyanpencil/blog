@@ -18,6 +18,7 @@ Italy and Switzerland basically every month. And when travelling with italian tr
 cannot go unnoticed:
  - soul-crushing delays
  - the voice that crushes your soul announcing those delays. 
+
 I'm pretty sure whoever set foot on a Trenitalia station knows perfectly what I'm talking about. For who doesn't,
 here's a great example of why this automatic voice is so iconic:
 
@@ -54,9 +55,9 @@ It was during a hacker camp (MCH 22), where I got hooked in playing with this be
 
 Long story short, by working as a voluntary for the POC (phone operation
   center) and operating this machine for a whole morning, I learnt the basics
-of SIP and phone protocols; I instantly remembered about my roommate's friend
+of SIP and phone protocols; I remembered about my roommate's friend
 and suddenly I got the urge to investigate if we could pull off the same trenitalia's cool phrack 
-to see if we could pull off some prank calls using this amazing machine. 
+to see if we could make some prank calls using this amazing machine. 
 
 This was perfect because I had a friend who recently started working at Trenitalia, and he would be the perfect victim.
 When I talked about this with some of my friends at the camp, everyone got excited and decided to help me in this 
@@ -258,7 +259,7 @@ I had a very fun time calling my friend; it took him a while to recognize I was 
 
 I've coded up a telegram bot for whoever wants to test trenitalia's voice. Do not abuse it!
 
-[Here is the link to the linea gialla bot](https://t.me/linea_gialla_bot) (or search for `@linea_gialla_bot` on telegram
+Here is the link to the [linea gialla bot](https://t.me/linea_gialla_bot) (or search for `@linea_gialla_bot` on telegram)
 
 <br>
 
