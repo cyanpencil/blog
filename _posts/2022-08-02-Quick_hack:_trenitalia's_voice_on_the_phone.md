@@ -97,7 +97,7 @@ Now, the camp already had a server running; we needed to
 
 Our very deep and extensive 2 hour long research resulted in the fact that you need the following 3 files configured:
 
-#### /etc/yate/accfile.conf
+#### `/etc/yate/accfile.conf`
 
 This file contains your credentials information to authenticate to a SIP server. Here `<username>` and `<password>` should
 be given to you by whoever is managing the SIP trunk (e.g. who is giving you the number). 
@@ -117,7 +117,7 @@ registrar=eu.st.ssl7.net # same as before? again? we're confused
 interval=120
 ```
 
-#### /etc/yate/regexroute.conf
+#### `/etc/yate/regexroute.conf`
 
 This file comes directly from hell as it tells yate how to route calls though regexes. Luckily 
 our use case is very simple, we want to route everything to music. 
@@ -135,7 +135,7 @@ this in regexroute.conf:
 Now we need to configure the actual music:
 
 
-#### /etc/yate/moh.conf
+#### `/etc/yate/moh.conf`
 
 Here you can configure a bash command that plays some music. 
 
