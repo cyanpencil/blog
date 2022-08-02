@@ -4,6 +4,8 @@ title:  "Quick hacks: trenitalia's voice on the phone"
 date:   Tue Aug  2 05:37:55 PM CEST 2022
 ---
 
+# Answer calls with Trenitalia's voice :S
+
 Welcome, dear reader, to the new episode of: "quick hacks", where we show off
 hacks you can pull off yourself in less than 24 hours.
 
@@ -41,12 +43,12 @@ things like Caller ID spoofing, creating conference calls, and so on, one partic
 through the phone using _exactly_ trenitalia's voice. 
 
 This really hit me deep: such a cool hack. I was amazed that phone-hacking (phracking) still existed and was possible. 
-The fact that this guy had a very misterious vibe around him convinced me that this was a particularly elaborate hack, 
+The fact that this guy had a very mysterious vibe around him convinced me that this was a particularly elaborate hack, 
 and I brushed it off as something I would need to spend months on to figure out and reproduce it.
 
 Around one week later, I forgot about the whole thing.
 
-## our crime is that of curiousity
+## our crime is that of curiosity
 
 Yeah, that's what they say. In this case I'm a very late criminal, as it took me 2 years to jump into the rabbit hole.
 It was during a hacker camp (MCH 22), where I got hooked in playing with this beautiful machine they had:
@@ -80,7 +82,7 @@ lists not archived anywhere.
 So we had pretty much nothing except the few pieces of official documentation that were still available in 2022, and
 the good old battle-tested approach of _trial-and-error until it works_ (or, as my friend @dex puts it, also known as _shotgun approach_) (a quote from Rene' Ferretti perfectly summarizes this concept in italian: _"a cazzo di cane, non ci crederesti, ma funziona sempre"_)
 
-With that said, expect very terrible explainations about why the things we did work.  I am going to leave them as an exercise to the reader.
+With that said, expect very terrible explanations about why the things we did work.  I am going to leave them as an exercise to the reader.
 
 
 ### yate configuration
