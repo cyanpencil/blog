@@ -43,7 +43,7 @@ This really hit me deep: such a cool hack. I was amazed that phone-hacking (phra
 The fact that this guy had a very misterious vibe around him convinced me that this was a particularly elaborate hack, 
 and I brushed it off as something I would need to spend months on to figure out and reproduce it.
 
-Around I week later, I forgot about the whole thing.
+Around one week later, I forgot about the whole thing.
 
 ## our crime is that of curiousity
 
@@ -247,13 +247,18 @@ I adapted the moh.conf to always output something (`out.mp3` if available, other
 
 ```
 parlatreno=while true; do bash -c "if [[ -f done ]]; then rm done; mpg123 -f 120000 -q -m -r 8000 -s out.mp3; else  mpg123 -f 120000 -q -m -r 8000 -s 2sec.mp3; fi;" ; done
-
 ```
 
 And guess what? it worked!
 
 I had a very fun time calling my friend; it took him a while to recognize I was the one controlling the voice :P
 
+
+## Telegram bot
+
+I've coded up a telegram bot for whoever wants to test trenitalia's voice. Do not abuse it!
+
+[Here is the link to the linea gialla bot](https://t.me/botfather) (or search for @linea\_gialla\_bot)
 
 <br>
 
@@ -264,3 +269,6 @@ I had a very fun time calling my friend; it took him a while to recognize I was 
 If you liked this hack, make sure to hit me up and meet me at next year's camp
 (CCC 2023). Expect some even crazier phone hacking shenanigans. If you hear
 some camp-wide trains announcement, you know who's behind them.
+
+Special credit goes to the "misterious friend" of my roommate's, the one who showed me this in the first place. Thank you so much! (I still have no clue who he is)
+
