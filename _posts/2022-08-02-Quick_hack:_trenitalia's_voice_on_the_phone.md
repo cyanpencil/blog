@@ -60,7 +60,7 @@ to see if we could pull off some prank calls using this amazing machine.
 
 This was perfect because I had a friend who recently started working at Trenitalia, and he would be the perfect victim.
 When I talked about this with some of my friends at the camp, everyone got excited and decided to help me in this 
-ordeal; significant credit goes to @neopt, @goeoe, @null and also to @neon.
+ordeal; significant credit goes to `@neopt`, `@goeoe`, `@null` and also to `@neon`.
 
 However, the catch was that the camp was going to end in about 24 hours; could we pull it off? 
 
