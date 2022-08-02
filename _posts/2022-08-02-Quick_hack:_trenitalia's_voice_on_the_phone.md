@@ -22,7 +22,7 @@ I'm pretty sure whoever set foot on a Trenitalia station knows perfectly what I'
 here's a great example of why this automatic voice is so iconic:
 
 <center>
-<iframe width="50%" 
+<iframe width="50%"  height="20%"
 src="https://www.youtube.com/embed/nzzM7tO4Lqg" title="YouTube video player"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
