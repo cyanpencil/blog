@@ -258,7 +258,7 @@ I had a very fun time calling my friend; it took him a while to recognize I was 
 
 I've coded up a telegram bot for whoever wants to test trenitalia's voice. Do not abuse it!
 
-[Here is the link to the linea gialla bot](https://t.me/botfather) (or search for @linea\_gialla\_bot)
+[Here is the link to the linea gialla bot](https://t.me/botfather) (or search for `@linea\_gialla\_bot` on telegram
 
 <br>
 
