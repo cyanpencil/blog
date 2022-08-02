@@ -21,10 +21,12 @@ cannot go unnoticed:
 I'm pretty sure whoever set foot on a Trenitalia station knows perfectly what I'm talking about. For who doesn't,
 here's a great example of why this automatic voice is so iconic:
 
+<center>
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/nzzM7tO4Lqg" title="YouTube video player"
 frameborder="0" allow="accelerometer; autoplay; clipboard-write;
 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 ## hooked and challenged
 
@@ -253,7 +255,9 @@ And guess what? it worked!
 I had a very fun time calling my friend; it took him a while to recognize I was the one controlling the voice :P
 
 
+<br/>
 ---
+<br/>
 
 If you liked this hack, make sure to hit me up and meet me at next year's camp
 (CCC 2023). Expect some even crazier phone hacking shenanigans. If you hear
