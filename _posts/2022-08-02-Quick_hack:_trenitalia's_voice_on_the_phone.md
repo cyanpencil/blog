@@ -77,7 +77,7 @@ documentation is either outdated or offline. Most tutorials and examples are hos
 lists not archived anywhere. 
 
 So we had pretty much nothing except the few pieces of official documentation that were still available in 2022, and
-the good old battle-tested approach of _trial-and-error until it works_ (or, as my friend @dex puts it, also known as _shotgun approach_) (a quote from Rene' Ferretti perfectly summarizes this concept in italian: _"a cazzo di cane, non ci crederesti, ma funziona sempre"_
+the good old battle-tested approach of _trial-and-error until it works_ (or, as my friend @dex puts it, also known as _shotgun approach_) (a quote from Rene' Ferretti perfectly summarizes this concept in italian: _"a cazzo di cane, non ci crederesti, ma funziona sempre"_)
 
 With that said, expect very terrible explainations about why the things we did work.  I am going to leave them as an exercise to the reader.
 
