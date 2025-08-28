@@ -17,6 +17,8 @@ Have a look at my stuff
 [<a href="{{ site.baseurl }}/about">about</a>]
 -
 [<a href="{{ site.baseurl }}/contact">contact</a>]
+-
+[<a href="http://demostream.cyanpencil.xyz/">demostream</a>]
 </center>
 </div>
 
