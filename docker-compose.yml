@@ -5,7 +5,7 @@ services:
     build: .
     ports:
       - "4000:4000"
-      - "35729:35729"
+      - "127.0.0.1:35729:35729"
     volumes:
       - .:/site
       - jekyll-gems:/usr/local/bundle
